@@ -3,7 +3,7 @@
 This app is a project from class wich represents a market of primed mods from the game Warframe (still in development).
 
 The app is connected to a node.js server (you have to change your IP each time It changes). The app shows information about the server 
-that provide as json. 
+provided as json. 
 
 ##### Something that I didn´t learn from class
 
