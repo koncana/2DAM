@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>
+      Prime Market App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-input [(ngModel)]="namePost" placeholder='Name'></ion-input>
+    <ion-input [(ngModel)]='quantityPost' placeholder='Quantity' type="number"></ion-input>
+    <br/>
+    <ion-button  size="small" color="tertiary" (click)='addObject()'>Add</ion-button>
+    <ion-button  size="small" color="tertiary" (click)='connectApi()'>Show a mod</ion-button>
+    <ion-button  size="small" color="tertiary" (click)='connectApiAll()'>Show all mods</ion-button>
+
+    <ion-list *ngFor="let mod of mods">
+      <p>{{mod.name}}
+        <ion-icon name="cog" (click)="modifyObject(mod.name)"></ion-icon>
+        <ion-icon name="trash" (click)="removeObject(mod.name)"></ion-icon>
+      </p>
+      <p>{{mod.quantity}}
+        <ion-icon name="remove" (click)="decreaseQuantity(mod.name, mod.quantity)"></ion-icon>
+        <ion-icon name="add" (click)="increaseQuantity(mod.name, mod.quantity)"></ion-icon>
+      </p>
+    </ion-list>
+  </div>
+</ion-content>
