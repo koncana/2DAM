@@ -3,7 +3,7 @@
 This API store and provide information for the market of primed mods of the game Warframe. In this API is implemented a CRUD.
 It uses spring with hibernate to connect to a MySQL database.
 
-This api is used by ionicMarketApp. 
+This API is used by ionicMarketApp. 
 
 ##### Something that I didn´t learn from class
 
